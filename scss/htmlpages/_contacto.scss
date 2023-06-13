@@ -1,0 +1,21 @@
+@import "utilidades/variables.scss";
+@import "utilidades/mixin.scss";
+
+.main-contacto {
+    .formulario-contacto {
+        padding: $dosr;
+        margin: $unr 3rem 5rem 3rem;
+        row-gap: $dosr;
+        column-gap: $dosr;
+        @include flex(flex, "", center, "");
+
+        .formulario-titulo {
+            @include fuentes($fuente-helveticafuerte, 400, $uncir);
+            text-transform: uppercase;
+        }
+
+        .formulario-parrafo {
+            margin: 0.2rem;
+        }
+    }
+}

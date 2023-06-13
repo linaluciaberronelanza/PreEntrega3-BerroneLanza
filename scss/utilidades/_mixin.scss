@@ -1,0 +1,89 @@
+//carousel
+
+@mixin carousel ($font) {
+    max-width: 100rem;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    font-family: $font;
+}
+
+//tamaño y margen
+
+@mixin tamaño($wid, $hei) {
+    width: $wid;
+    height: $hei;
+}
+
+@mixin margen ($marg, $padd) {
+    margin: $marg;
+    padding: $padd;
+}
+
+//fuentes
+
+@mixin fuentes($familia, $peso, $tam) {
+    font-family: $familia;
+    font-weight: $peso;
+    font-size: $tam;
+}
+
+@mixin textos($align, $mayus) {
+    text-align: $align;
+    text-transform: $mayus;
+}
+
+@mixin mobile {
+    @media screen and (max-width:600px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width:600px) {
+        @content;
+    }
+}
+
+@mixin notebook {
+    @media screen and (min-width:992px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width:1200px) {
+        @content;
+    }
+}
+
+@mixin flex($flex, $flexd, $just, $ali) {
+    display: $flex;
+    flex-direction: $flexd;
+    justify-content: $just;
+    align-items: $ali;
+
+}
+
+@mixin griduso($gc, $gr) {
+    grid-column: $gc;
+    grid-row: $gr;
+}
+
+@mixin gridusoampliado($cs, $ce, $rs, $re) {
+    grid-column-start: $cs;
+    grid-column-end: $ce;
+    grid-row-start: $rs;
+    grid-row-end: $re;
+}
+
+@mixin posicion ($of, $op) {
+    object-fit: $of;
+    object-position: $op;
+}
+
+@mixin grid-footerxl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 30rem;
+}

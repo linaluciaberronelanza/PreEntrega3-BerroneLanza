@@ -1,0 +1,183 @@
+@import "utilidades/variables.scss";
+@import "utilidades/extend.scss";
+@import "utilidades/mixin.scss";
+
+
+.main-proyectos {
+    .proyectos-imagenes {
+        display: grid;
+        @include margen(1rem 3rem 5rem 3rem, $dosr);
+        column-gap: $unr;
+        row-gap: $unr;
+
+        @include desktop {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, 20rem);
+        }
+
+        @include notebook {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, 20rem);
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, 20rem);
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(1fr);
+        }
+
+        .img-uno {
+            @include desktop {
+                @include griduso(span 2, 1);
+            }
+
+            @include notebook {
+                @include griduso(span 2, 1);
+            }
+
+            @include tablet {
+                @include griduso(span 2, 1);
+            }
+        }
+
+        .img-dos {
+            @include desktop {
+                @include gridusoampliado(3, 5, 2, "");
+            }
+
+            @include notebook {
+                @include gridusoampliado(3, 5, 2, "");
+            }
+
+            @include tablet {
+                @include gridusoampliado(3, 5, 2, "");
+            }
+        }
+
+        .img-tres {
+            @include desktop {
+                @include gridusoampliado(1, 3, 2, 3);
+            }
+
+            @include notebook {
+                @include gridusoampliado(1, 3, 2, 4);
+            }
+
+            @include tablet {
+                @include gridusoampliado(1, 3, 2, 4);
+            }
+        }
+
+        .img-cuatro {
+            @include desktop {
+                @include gridusoampliado(5, 7, 3, "");
+            }
+
+            @include notebook {
+                @include gridusoampliado(5, 7, 3, "");
+            }
+
+            @include tablet {
+                @include gridusoampliado(5, 7, 3, "");
+            }
+        }
+
+        .img-cinco {
+            @include desktop {
+                @include gridusoampliado(4, 6, 1, "");
+            }
+
+            @include notebook {
+                @include gridusoampliado(4, 6, 1, "");
+            }
+
+            @include tablet {
+                @include gridusoampliado(4, 6, 1, "");
+            }
+        }
+
+        .img-seis {
+            display: none;
+
+            @include desktop {
+                display: block;
+                @include gridusoampliado(3, 5, 3, "");
+            }
+
+            @include notebook {
+                display: block;
+                @include gridusoampliado(3, 5, 3, "");
+            }
+
+            @include tablet {
+                display: block;
+                @include gridusoampliado(3, 5, 3, "");
+            }
+        }
+
+        .img-siete {
+            @include desktop {
+                @include gridusoampliado(5, 7, 2, "");
+            }
+
+            @include notebook {
+                @include gridusoampliado(5, 7, 2, "");
+            }
+
+            @include tablet {
+                @include gridusoampliado(5, 7, 2, "");
+            }
+        }
+
+        .img-ocho {
+            display: none;
+
+            @include desktop {
+                display: block;
+                @include griduso(3, 1);
+                object-position: top 20%;
+            }
+
+            @include notebook {
+                display: block;
+                @include griduso(3, 1);
+                object-position: top 20%;
+            }
+
+            @include tablet {
+                display: block;
+                @include griduso(3, 1);
+                object-position: top 20%;
+            }
+        }
+
+        .img-nueve {
+            display: none;
+
+            @include desktop {
+                display: block;
+                @include griduso(6, 1);
+            }
+
+            @include notebook {
+                display: block;
+                @include griduso(6, 1);
+            }
+
+            @include tablet {
+                display: block;
+                @include griduso(6, 1);
+            }
+        }
+
+        div {
+            img {
+                @include tamaño(100%, 100%);
+                @include posicion (cover, "");
+            }
+        }
+    }
+}

@@ -1,0 +1,342 @@
+//import
+
+@import "utilidades/variables.scss";
+@import "utilidades/extend.scss";
+@import "utilidades/mixin.scss";
+@import "htmlpages/contacto";
+@import "htmlpages/mapa";
+@import "htmlpages/nosotros";
+@import "htmlpages/proyectos";
+
+/*RESET*/
+body {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-color: $color-fondo;
+    box-sizing: border-box;
+
+
+    //HOME - lo trabaje desde aca asi no se hacia lio
+
+    header {
+        background-color: $color-navbar;
+
+        .navbar-container {
+            width: 100%;
+
+            .navbar {
+                font-family: $fuente-helveticafuerte;
+
+                .container-seccion {
+                    .navbar-brand {
+                        margin: 0rem 4rem;
+                    }
+
+                    .collapse {
+                        .posicion-paginas {
+                            @include flex (flex, "", flex-end, "");
+                            width: 95%;
+
+                            .nav-item {
+                                .nav-link:hover {
+                                    transform: scale(0.85);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    main {
+        .carousel-posicion {
+            width: 100%;
+        }
+
+        .cajitas-contenedor {
+            @include tamaño (90rem, 30rem);
+            @include margen (3rem 0rem 3rem 0rem, "");
+            @extend %grid-cajitas;
+
+
+            @include desktop {
+                width: 100%;
+                @include flex (flex, "", space-around, "");
+                grid-template-columns: 1;
+                column-gap: 1rem;
+            }
+
+            @include notebook {
+                width: 100%;
+                @include flex (flex, "", space-around, "");
+                grid-template-columns: 1;
+                column-gap: 1rem;
+            }
+
+            @include tablet {
+                width: 100%;
+                @include flex (flex, "", space-around, "");
+                grid-template-columns: 1;
+                column-gap: 1rem;
+            }
+
+            @include mobile {
+                @include tamaño (100%, 80rem);
+                grid-template-columns: 1;
+                @include flex (flex, column, center, center);
+                flex-wrap: nowrap;
+                row-gap: 1rem;
+            }
+
+            .cajitahija {
+
+                @include desktop {
+                    @include tamaño(40rem, 30rem);
+                    border-radius: 8px;
+                    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+                    overflow: hidden;
+                    text-align: center;
+                    transition: all 0.25s;
+                }
+
+                @include notebook {
+                    @include tamaño(40rem, 30rem);
+                    border-radius: 8px;
+                    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+                    overflow: hidden;
+                    text-align: center;
+                    transition: all 0.25s;
+                }
+
+                @include tablet {
+                    @include tamaño(30rem, 30rem);
+                    border-radius: 8px;
+                    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+                    overflow: hidden;
+                    text-align: center;
+                    transition: all 0.25s;
+                }
+
+                @include mobile {
+                    grid-column: 1;
+                    width: 20rem;
+                    border-radius: 8px;
+                    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+                    overflow: hidden;
+                    text-align: center;
+                    transition: all 0.25s
+                }
+
+                img {
+                    @include desktop {
+                        @include tamaño(40rem, 20rem);
+                        @include posicion(cover, 20%);
+                    }
+
+                    @include notebook {
+                        @include tamaño(40rem, 20rem);
+                        @include posicion(cover, 20%);
+                    }
+
+                    @include tablet {
+                        @include tamaño(30rem, 20rem);
+                        @include posicion(cover, 20%);
+                    }
+
+                    @include mobile {
+                        @include tamaño(20rem, 20rem);
+                        @include posicion(cover, 20%);
+                    }
+                }
+
+                h3 {
+                    @include desktop {
+                        @include fuentes($fuente-helveticafuerte, $seisc, $uncir);
+                        margin: $cecir;
+                        text-transform: uppercase;
+                    }
+
+                    @include notebook {
+                        @include fuentes($fuente-helveticafuerte, $seisc, $uncir);
+                        margin: $cecir;
+                        text-transform: uppercase;
+                    }
+
+                    @include tablet {
+                        @include fuentes($fuente-helveticafuerte, $seisc, $uncir);
+                        margin: $cecir;
+                        text-transform: uppercase;
+                    }
+
+                    @include mobile {
+                        @include fuentes($fuente-helveticafuerte, $dosc, $unr);
+                        margin: $cecir;
+                        text-transform: uppercase;
+                    }
+                }
+
+                p {
+                    @include desktop {
+                        @include fuentes($fuente-helveticafuerte, $seisc, $unr);
+                        margin: $unr;
+                        @include textos(justify, "");
+                    }
+
+                    @include notebook {
+                        @include fuentes($fuente-helveticafuerte, $seisc, $unr);
+                        margin: $unr;
+                        @include textos(justify, "");
+                    }
+
+                    @include tablet {
+                        @include fuentes($fuente-helveticafuerte, $seisc, $unr);
+                        margin: $unr;
+                        @include textos(justify, "");
+                    }
+
+                    @include mobile {
+                        @include fuentes($fuente-helveticafuerte, $seisc, 0.9rem);
+                        margin: $unr;
+                        @include textos(justify, "");
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    footer {
+        .container-footer {
+            background-color: $color-secundario;
+            @include fuentes ($fuente-helveticafuerte, "", "");
+            @include textos ("", uppercase);
+
+            @include desktop {
+                @include tamaño(100%, "");
+                @include grid-footerxl;
+            }
+
+            @include notebook {
+                @include tamaño(100%, "");
+                @include grid-footerxl;
+            }
+
+            @include tablet {
+                @include tamaño(100%, "");
+                @include grid-footerxl;
+            }
+
+            @include mobile {
+                @include tamaño(100%, "");
+                @include flex (flex, column, "", "");
+            }
+
+            .footer-column01 {
+                @include desktop {
+                    @include griduso (1, 1);
+                    @include flex (flex, column, center, center);
+                    @include fuentes("", $seisc, $unr);
+                }
+
+                @include notebook {
+                    @include griduso (1, 1);
+                    @include flex (flex, column, center, center);
+                    @include fuentes("", $seisc, $unr);
+                }
+
+                @include tablet {
+                    @include griduso (1, 1);
+                    @include flex (flex, column, center, center);
+                    @include fuentes("", $seisc, $unr);
+                }
+
+                @include mobile {
+                    @include flex (flex, column, center, center);
+                    @include fuentes("", $seisc, $unr);
+                }
+
+                .logo-image {
+                    @include desktop {
+                        width: 10rem;
+                    }
+
+                    @include notebook {
+                        width: 10rem;
+                    }
+
+                    @include tablet {
+                        width: 9rem;
+                    }
+
+                    @include mobile {
+                        width: 8rem;
+                    }
+                }
+
+                .logo-description {
+                    font-family: $fuente-helveticafuerte;
+                }
+
+            }
+
+            .footer-column02 {
+                @include desktop {
+                    @include griduso (2, 1);
+                    @include flex (flex, column, center, center);
+                    @include fuentes($fuente-helveticafuerte, $seisc, $unr);
+                }
+
+                @include notebook {
+                    @include griduso (2, 1);
+                    @include flex (flex, column, center, center);
+                    @include fuentes($fuente-helveticafuerte, $seisc, $unr);
+                }
+
+                @include tablet {
+                    @include griduso (2, 1);
+                    @include flex (flex, column, center, center);
+                    @include fuentes($fuente-helveticafuerte, $seisc, $unr);
+                }
+
+                @include mobile {
+                    @include flex (flex, column, center, center);
+                    @include fuentes($fuente-helveticafuerte, $seisc, $unr);
+                }
+            }
+
+            .footer-column03 {
+                @include desktop {
+                    @include griduso (3, 1);
+                    @include flex (flex, "", center, center);
+                }
+
+                @include notebook {
+                    @include griduso (3, 1);
+                    @include flex (flex, "", center, center);
+                }
+
+                @include tablet {
+                    @include griduso (3, 1);
+                    @include flex (flex, "", center, center);
+                }
+
+                @include mobile {
+                    @include flex (flex, "", center, center);
+                }
+
+                .icon {
+                    img {
+                        @include tamaño(2rem, 2em);
+                    }
+                }
+            }
+        }
+
+    }
+
+
+}

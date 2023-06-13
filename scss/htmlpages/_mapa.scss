@@ -1,0 +1,22 @@
+@import "utilidades/variables.scss";
+@import "utilidades/mixin.scss";
+
+.main-mapa {
+    .mapa-contenedor {
+        margin: 1rem 3rem 1rem 3rem;
+        @include flex(flex, "", center, center);
+
+        .mapa-titulo {
+            @include fuentes($fuente-helveticafuerte, 300, $dosr);
+            text-transform: uppercase;
+            @include flex(flex, "", center, center);
+            text-align: justify
+        }
+
+        .mapa-parrafo {
+            @include fuentes($fuente-helveticafuerte, 100, $unr);
+            @include flex(flex, "", center, center);
+            text-align: justify;
+        }
+    }
+}
