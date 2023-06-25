@@ -3,77 +3,172 @@ body main .cajitas-contenedor {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100%; }
 
-.main-contacto .formulario-contacto {
-  padding: 2rem;
-  margin: 1rem 3rem 5rem 3rem;
-  row-gap: 2rem;
-  column-gap: 2rem;
-  display: flex;
-  flex-direction: "";
-  justify-content: center;
-  align-items: ""; }
-  .main-contacto .formulario-contacto .formulario-titulo {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    text-transform: uppercase; }
-  .main-contacto .formulario-contacto .formulario-parrafo {
-    margin: 0.2rem; }
+.main-contacto .contact-container {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 40%, 30%, 30%;
+  grid-template-rows: 55rem; }
+  .main-contacto .contact-container .left-col {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1; }
+    .main-contacto .contact-container .left-col .imagen-contacto {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: ""; }
+      @media screen and (max-width: 600px) {
+        .main-contacto .contact-container .left-col .imagen-contacto {
+          display: none; } }
+  .main-contacto .contact-container .right-col {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    padding: 6rem 3rem; }
+    .main-contacto .contact-container .right-col .formulario-titulo {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 300;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem; }
+    .main-contacto .contact-container .right-col p {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      text-align: justify;
+      width: 100%; }
+    .main-contacto .contact-container .right-col .contact-form {
+      width: 100%;
+      position: relative;
+      margin-top: 2rem;
+      padding: 1rem 0; }
+      .main-contacto .contact-container .right-col .contact-form fieldset .formulario-parrafo label {
+        width: 100%;
+        display: block;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase; }
+      .main-contacto .contact-container .right-col .contact-form fieldset .formulario-parrafo input {
+        width: 100%;
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: 0.8rem;
+        border: none;
+        border-bottom: 1px solid #3B3636;
+        padding: 0.5rem 0;
+        margin-bottom: 1rem;
+        outline: none; }
+      .main-contacto .contact-container .right-col .contact-form fieldset .formulario-parrafo textarea {
+        width: 100%;
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: 0.8rem;
+        border: none;
+        border-bottom: 1px solid #3B3636;
+        padding: 0.5rem 0;
+        margin-bottom: 1rem;
+        outline: none; }
+      .main-contacto .contact-container .right-col .contact-form fieldset .formulario-parrafo button {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        font-size: "";
+        text-transform: uppercase;
+        background: #3B3636;
+        color: #ffffff;
+        width: 10rem;
+        height: 2.25rem;
+        border: none;
+        border-radius: 2px;
+        outline: none;
+        cursor: pointer; }
 
 .main-mapa .mapa-contenedor {
   margin: 1rem 3rem 1rem 3rem;
   display: flex;
-  flex-direction: "";
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .main-mapa .mapa-contenedor .mapa-titulo {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-weight: 300;
-    font-size: 2rem;
-    text-transform: uppercase;
+  .main-mapa .mapa-contenedor .mapa-interactivo {
     display: flex;
-    flex-direction: "";
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: justify; }
-  .main-mapa .mapa-contenedor .mapa-parrafo {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-weight: 100;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: "";
-    justify-content: center;
-    align-items: center;
-    text-align: justify; }
+    width: 100%;
+    height: 40rem; }
+    .main-mapa .mapa-contenedor .mapa-interactivo iframe {
+      width: 35rem;
+      height: 35rem; }
+      @media screen and (max-width: 600px) {
+        .main-mapa .mapa-contenedor .mapa-interactivo iframe {
+          width: 25rem;
+          height: 25rem; } }
+
+.main-mapa .mapa-titulo {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: justify;
+  letter-spacing: 0.32rem;
+  margin: 1rem; }
+  @media screen and (min-width: 600px) {
+    .main-mapa .mapa-titulo {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center; } }
+  @media screen and (max-width: 600px) {
+    .main-mapa .mapa-titulo {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-align: center; } }
+
+.main-mapa .mapa-parrafo {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 100;
+  font-size: 1rem; }
+  @media screen and (max-width: 600px) {
+    .main-mapa .mapa-parrafo {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      text-align: justify; } }
 
 body main .cajitas-contenedor {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100%; }
 
-.main-nosotros .nosotros-titulo {
-  padding: 1rem;
-  margin: 1rem 3rem 1rem 3rem;
+.main-nosotros {
+  width: 100%;
+  height: 35rem;
   display: flex;
-  flex-direction: "";
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 400;
-  font-size: 3rem;
-  text-transform: uppercase; }
-
-.main-nosotros .nosotros-parrafo {
-  padding: 2rem;
-  margin: 1rem 3rem 1rem 3rem;
-  display: flex;
-  flex-direction: "";
-  justify-content: center;
-  align-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  text-align: justify; }
+  align-items: center; }
+  .main-nosotros .nosotros-titulo {
+    padding: 1rem;
+    margin: 1rem 3rem 1rem 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    text-transform: uppercase; }
+  .main-nosotros .nosotros-parrafo {
+    padding: 2rem;
+    margin: 1rem 3rem 1rem 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: justify; }
 
 body main .cajitas-contenedor {
   display: grid;
@@ -461,30 +556,28 @@ body {
     background-color: whitesmoke;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: "";
-    font-size: "";
-    text-align: "";
-    text-transform: uppercase; }
+    font-size: ""; }
     @media screen and (min-width: 1200px) {
       body footer .container-footer {
         width: 100%;
         height: "";
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 30rem; } }
+        grid-template-rows: 15rem; } }
     @media screen and (min-width: 992px) {
       body footer .container-footer {
         width: 100%;
         height: "";
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 30rem; } }
+        grid-template-rows: 15rem; } }
     @media screen and (min-width: 600px) {
       body footer .container-footer {
         width: 100%;
         height: "";
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 30rem; } }
+        grid-template-rows: 15rem; } }
     @media screen and (max-width: 600px) {
       body footer .container-footer {
         width: 100%;
@@ -493,62 +586,65 @@ body {
         flex-direction: column;
         justify-content: "";
         align-items: ""; } }
-    @media screen and (min-width: 1200px) {
-      body footer .container-footer .footer-column01 {
-        grid-column: 1;
-        grid-row: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: "";
-        font-weight: 600;
-        font-size: 1rem; } }
-    @media screen and (min-width: 992px) {
-      body footer .container-footer .footer-column01 {
-        grid-column: 1;
-        grid-row: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: "";
-        font-weight: 600;
-        font-size: 1rem; } }
-    @media screen and (min-width: 600px) {
-      body footer .container-footer .footer-column01 {
-        grid-column: 1;
-        grid-row: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: "";
-        font-weight: 600;
-        font-size: 1rem; } }
-    @media screen and (max-width: 600px) {
-      body footer .container-footer .footer-column01 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: "";
-        font-weight: 600;
-        font-size: 1rem; } }
-    @media screen and (min-width: 1200px) {
-      body footer .container-footer .footer-column01 .logo-image {
-        width: 10rem; } }
-    @media screen and (min-width: 992px) {
-      body footer .container-footer .footer-column01 .logo-image {
-        width: 10rem; } }
-    @media screen and (min-width: 600px) {
-      body footer .container-footer .footer-column01 .logo-image {
-        width: 9rem; } }
-    @media screen and (max-width: 600px) {
-      body footer .container-footer .footer-column01 .logo-image {
-        width: 8rem; } }
-    body footer .container-footer .footer-column01 .logo-description {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
+    body footer .container-footer .footer-column01 {
+      text-align: "";
+      text-transform: uppercase; }
+      @media screen and (min-width: 1200px) {
+        body footer .container-footer .footer-column01 {
+          grid-column: 1;
+          grid-row: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-family: "";
+          font-weight: 600;
+          font-size: 1rem; } }
+      @media screen and (min-width: 992px) {
+        body footer .container-footer .footer-column01 {
+          grid-column: 1;
+          grid-row: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-family: "";
+          font-weight: 600;
+          font-size: 1rem; } }
+      @media screen and (min-width: 600px) {
+        body footer .container-footer .footer-column01 {
+          grid-column: 1;
+          grid-row: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-family: "";
+          font-weight: 600;
+          font-size: 1rem; } }
+      @media screen and (max-width: 600px) {
+        body footer .container-footer .footer-column01 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-family: "";
+          font-weight: 600;
+          font-size: 1rem; } }
+      @media screen and (min-width: 1200px) {
+        body footer .container-footer .footer-column01 .logo-image {
+          width: 10rem; } }
+      @media screen and (min-width: 992px) {
+        body footer .container-footer .footer-column01 .logo-image {
+          width: 10rem; } }
+      @media screen and (min-width: 600px) {
+        body footer .container-footer .footer-column01 .logo-image {
+          width: 9rem; } }
+      @media screen and (max-width: 600px) {
+        body footer .container-footer .footer-column01 .logo-image {
+          width: 8rem; } }
+      body footer .container-footer .footer-column01 .logo-description {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
     @media screen and (min-width: 1200px) {
       body footer .container-footer .footer-column02 {
         grid-column: 2;
@@ -591,12 +687,20 @@ body {
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         font-weight: 600;
         font-size: 1rem; } }
+    body footer .container-footer .footer-column02 h4 {
+      text-align: "";
+      text-transform: uppercase; }
+    body footer .container-footer .footer-column02 ul {
+      list-style: none; }
+      body footer .container-footer .footer-column02 ul .list-link {
+        text-decoration: none;
+        color: #3B3636; }
     @media screen and (min-width: 1200px) {
       body footer .container-footer .footer-column03 {
         grid-column: 3;
         grid-row: 1;
         display: flex;
-        flex-direction: "";
+        flex-direction: column;
         justify-content: center;
         align-items: center; } }
     @media screen and (min-width: 992px) {
@@ -604,7 +708,7 @@ body {
         grid-column: 3;
         grid-row: 1;
         display: flex;
-        flex-direction: "";
+        flex-direction: column;
         justify-content: center;
         align-items: center; } }
     @media screen and (min-width: 600px) {
@@ -612,15 +716,16 @@ body {
         grid-column: 3;
         grid-row: 1;
         display: flex;
-        flex-direction: "";
+        flex-direction: column;
         justify-content: center;
         align-items: center; } }
     @media screen and (max-width: 600px) {
       body footer .container-footer .footer-column03 {
         display: flex;
-        flex-direction: "";
+        flex-direction: column;
         justify-content: center;
         align-items: center; } }
-    body footer .container-footer .footer-column03 .icon img {
-      width: 2rem;
-      height: 2em; }
+    body footer .container-footer .footer-column03 .icon-link {
+      text-decoration: none;
+      color: #3B3636;
+      margin: 0.5rem; }

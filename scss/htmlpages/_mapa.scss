@@ -4,18 +4,45 @@
 .main-mapa {
     .mapa-contenedor {
         margin: 1rem 3rem 1rem 3rem;
-        @include flex(flex, "", center, center);
+        @include flex(flex, column, center, center);
 
-        .mapa-titulo {
-            @include fuentes($fuente-helveticafuerte, 300, $dosr);
-            text-transform: uppercase;
-            @include flex(flex, "", center, center);
-            text-align: justify
+        .mapa-interactivo {
+            @include flex(flex, column, center, center);
+            @include tamaño (100%, 40rem);
+
+            iframe {
+                @include tamaño (35rem, 35rem);
+
+                @include mobile {
+                    @include tamaño (25rem, 25rem);
+                }
+            }
+        }
+    }
+
+    .mapa-titulo {
+        @include fuentes($fuente-helveticafuerte, 400, $dosr);
+        text-transform: uppercase;
+        text-align: justify;
+        letter-spacing: 0.32rem;
+        margin: 1rem;
+
+        @include tablet {
+            @include fuentes($fuente-helveticafuerte, 400, $uncir);
+            text-align: center;
         }
 
-        .mapa-parrafo {
-            @include fuentes($fuente-helveticafuerte, 100, $unr);
-            @include flex(flex, "", center, center);
+        @include mobile {
+            @include fuentes($fuente-helveticafuerte, 400, $uncir);
+            text-align: center;
+        }
+    }
+
+    .mapa-parrafo {
+        @include fuentes($fuente-helveticafuerte, 100, $unr);
+
+        @include mobile {
+            @include fuentes($fuente-helveticafuerte, 300, $unr);
             text-align: justify;
         }
     }

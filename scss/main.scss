@@ -209,11 +209,12 @@ body {
 
     }
 
+    // Footer tambien esta trabajado solo en esta pagina
+
     footer {
         .container-footer {
             background-color: $color-secundario;
             @include fuentes ($fuente-helveticafuerte, "", "");
-            @include textos ("", uppercase);
 
             @include desktop {
                 @include tamaño(100%, "");
@@ -236,6 +237,8 @@ body {
             }
 
             .footer-column01 {
+                @include textos ("", uppercase);
+
                 @include desktop {
                     @include griduso (1, 1);
                     @include flex (flex, column, center, center);
@@ -306,33 +309,47 @@ body {
                     @include flex (flex, column, center, center);
                     @include fuentes($fuente-helveticafuerte, $seisc, $unr);
                 }
+
+                h4 {
+                    @include textos ("", uppercase);
+                }
+
+                ul {
+                    list-style: none;
+
+                    .list-link {
+                        text-decoration: none;
+                        color: $color-button;
+                    }
+                }
             }
 
             .footer-column03 {
                 @include desktop {
                     @include griduso (3, 1);
-                    @include flex (flex, "", center, center);
+                    @include flex (flex, column, center, center);
                 }
 
                 @include notebook {
                     @include griduso (3, 1);
-                    @include flex (flex, "", center, center);
+                    @include flex (flex, column, center, center);
                 }
 
                 @include tablet {
                     @include griduso (3, 1);
-                    @include flex (flex, "", center, center);
+                    @include flex (flex, column, center, center);
                 }
 
                 @include mobile {
-                    @include flex (flex, "", center, center);
+                    @include flex (flex, column, center, center);
                 }
 
-                .icon {
-                    img {
-                        @include tamaño(2rem, 2em);
-                    }
+                .icon-link {
+                    text-decoration: none;
+                    color: $color-button;
+                    margin: $cecir;
                 }
+
             }
         }
 

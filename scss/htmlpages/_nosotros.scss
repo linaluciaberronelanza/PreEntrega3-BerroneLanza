@@ -3,10 +3,12 @@
 @import "utilidades/mixin.scss";
 
 .main-nosotros {
+    @include tamaño(100%, 35rem);
+    @include flex(flex, column, center, center);
+
     .nosotros-titulo {
         padding: $unr;
         margin: 1rem 3rem 1rem 3rem;
-        @include flex(flex, "", center, center);
         @include fuentes($fuente-helveticafuerte, 400, 3rem);
         text-transform: uppercase;
     }
@@ -14,7 +16,6 @@
     .nosotros-parrafo {
         padding: $dosr;
         margin: 1rem 3rem 1rem 3rem;
-        @include flex(flex, "", center, center);
         @include fuentes($fuente-helveticafuerte, 300, 1rem);
         text-align: justify;
     }
